@@ -30,7 +30,13 @@ module.exports = (horseman) => {
       })
       .screenshot('./screenshots/3-Selected_Size.png')
       .click('#add-remove-buttons > .button')
-      .wait(160) //besser auf element warten
+      .waitFor(function() {
+        var cart = document.getElementById('cart');
+        if(cart.getAttribute('class') !== 'hidden') {
+          var cartVisible = true;
+          return cartVisible
+        }
+      }, true)
       .screenshot('./screenshots/4-Product_In_Cart.png')
       .then(() => {
         console.log(chalk.green('✅  Put the product in cart'))
