@@ -1,5 +1,5 @@
 # CopperCabana
-> CopperCabana is an automation software that buys prodcuts from supremenewyork.com automatically and as quickly as possible. It is written in JavaScript and based on node.js and [Horseman](https://github.com/johntitus/node-horseman).
+> CopperCabana is an automation software that buys prodcuts from supremenewyork.com as quickly as possible. It is written in JavaScript and based on node.js and [Horseman](https://github.com/johntitus/node-horseman).
 
 ## Features
 - Fast checkout time
