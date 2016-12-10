@@ -18,7 +18,7 @@
   },
   "creditCard": {
     "type": "visa",
-    "number": "7855993300002834",
+    "number": "1234567890123456",
     "expMonth": "12",
     "expYear": "2019",
     "cvv": "123"
