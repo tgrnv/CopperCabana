@@ -1,0 +1,26 @@
+{
+  "product": {
+    "name": "Cable Knit",
+    "color": "Natural",
+    "size": "Large",
+    "categoryURL": "http://www.supremenewyork.com/shop/all/tops_sweaters"
+  },
+  "buyer": {
+    "fullName": "Sue Preme",
+    "email": "suepreme@gmail.com",
+    "phone": "0150483950",
+    "address": "Supreme Street 1",
+    "address2": "c/o Sue Preme",
+    "address3": "No Ls pls",
+    "city": "Sup",
+    "zip": "42069",
+    "country": "DE"
+  },
+  "creditCard": {
+    "type": "visa",
+    "number": "4349995833339201",
+    "expMonth": "12",
+    "expYear": "2019",
+    "cvv": "123"
+  }
+}
