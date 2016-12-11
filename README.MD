@@ -1,4 +1,24 @@
 # CopperCabana
+```
+       ****
+     ********
+    **  ******
+     *   ******     ******
+         ******   *********         Welcome to
+          ****  *****   ***
+          ***  ***     **           oooooooo8   ooooooo  oooooooooo oooooooooo ooooooooooo oooooooooo
+    *************       *         o888     88 o888   888o 888    888 888    888 888    88   888    888
+  ******************              888         888     888 888oooo88  888oooo88  888ooo8     888oooo88
+ *****   H*****H*******           888o     oo 888o   o888 888        888        888    oo   888  88o
+ ***     H-___-H  *********         888oooo88    88ooo88  o888o      o888o      o888ooo8888 o888o  88o8
+  ***    H     H      *******
+   **    H-___-H        *****       oooooooo8     o      oooooooooo      o      oooo   oooo     o
+     *   H     H         ****     o888     88    888      888    888    888      8888o  88     888
+         H     H         ***      888           8  88     888oooo88    8  88     88 888o88    8  88
+         H-___-H         **       888o     oo  8oooo88    888    888  8oooo88    88   8888   8oooo88
+         H     H         *          888oooo88 o88o  o888o o888ooo888 o88o  o888o o88o    88 o88o  o888o
+         H-___-H
+```
 > CopperCabana is an automation software that buys prodcuts from supremenewyork.com as quickly as possible. It is written in JavaScript and based on node.js and [Horseman](https://github.com/johntitus/node-horseman).
 
 ## Features
