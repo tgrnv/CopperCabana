@@ -12,6 +12,8 @@ var index = elasticlunr(function() {
 var Horseman = require('node-horseman');
 var horseman = new Horseman({
   injectJquery: false,
+  loadImages: false,
+  diskCache: true,
   timeout: 900000 // Setting the timeout like this is not beautiful.
                   // We need it to prevent wairForDrop from timing out.
                   // Need to find a way to set it only for this function.

@@ -28,12 +28,14 @@ module.exports = (horseman) => {
       .screenshot('./screenshots/5-Form_Filled.png')
       .click('.checkout')
       .then(() => {
+        global.finishTime = Date.now();
         console.log(chalk.green('✅  Confirmed payment'));
       })
       .waitForNextPage()
       .screenshot('./screenshots/6-Copped.png')
       .then(() => {
-        console.log(chalk.bold(chalk.green(chalk.underline('✅  We copped it! Take a deep breath and enjoy not taking an L!'))));
+        var copTime = global.finishTime - global.startTime;
+        console.log(chalk.bold(chalk.green(chalk.underline('✅  We copped it in ' + copTime + 'ms! Lit!'))));
         console.log(chalk.gray('📬  You should have an order confirmation in your inbox soon.\n'));
         resolve(horseman);
       })

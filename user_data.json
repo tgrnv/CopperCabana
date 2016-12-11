@@ -1,29 +1,29 @@
 {
   "drop": {
-    "date": "a",
-    "time": "12:00am",
+    "date": "",
+    "time": "03:10am",
     "zone": "LDN"
   },
   "product": {
-    "name": "a",
-    "color": "a",
+    "name": "",
+    "color": "",
     "size": "Small"
   },
   "buyer": {
-    "fullName": "a",
-    "email": "a",
-    "phone": "a",
-    "address2": "a",
-    "address3": "a",
-    "city": "a",
-    "zip": "a",
-    "country": "a"
+    "fullName": "",
+    "email": "",
+    "phone": "",
+    "address2": "",
+    "address3": "",
+    "city": "",
+    "zip": "",
+    "country": ""
   },
   "creditCard": {
     "type": "Visa",
-    "number": "a",
-    "expMonth": "a",
-    "expYear": "a",
-    "cvv": "aa"
+    "number": "",
+    "expMonth": "",
+    "expYear": "",
+    "cvv": ""
   }
 }

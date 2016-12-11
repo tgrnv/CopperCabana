@@ -4,7 +4,7 @@ module.exports = (answers) => {
   var data = {
     "drop": {
       "date": answers.dropDate,
-      "time": "12:00am",
+      "time": "03:10am",
       "zone": "LDN"
     },
     "product": {

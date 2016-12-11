@@ -15,6 +15,7 @@ module.exports = (horseman) => {
         };
       }, dropTime, true)
       .then(() => {
+        global.startTime = Date.now();
         console.log(chalk.cyan('ℹ️  Drop is now live'));
         resolve(horseman);
       })
