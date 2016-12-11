@@ -11,6 +11,7 @@
 - PLANNED: Start copping when the site changed in order to not be affected by time inaccuracies
 
 ## Using it
+0. This will probably only work on OS X and other Unix OSes.
 1. You need to have node installed on your system.
 2. Clone this repo and `cd` into the folder you cloned it to.
 3. Run `npm install` to install all dependencies.
