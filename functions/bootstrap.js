@@ -18,6 +18,12 @@ module.exports = (horseman) => {
       })
       .then(() => {
         console.log(chalk.green('✅  Bootstrapped the bot successfully'))
+      })
+      .open('http://supremenewyork.com/shop/all')
+      .screenshot('./screenshots/0-Test.png')
+      .then(() => {
+        console.log(chalk.green('✅  The Supreme site is working correctly'));
+        console.log(chalk.cyan('ℹ️  Waiting for the drop to start'));
         resolve(horseman);
       })
       .catch((e) => {

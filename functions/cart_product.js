@@ -39,7 +39,7 @@ module.exports = (horseman) => {
       }, true)
       .screenshot('./screenshots/4-Product_In_Cart.png')
       .then(() => {
-        console.log(chalk.green('✅  Put the product in cart'))
+        console.log(chalk.green('✅  Put the product in your cart and going to checkout'))
         resolve(horseman);
       })
       .catch((e) => {

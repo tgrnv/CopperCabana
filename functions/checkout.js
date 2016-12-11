@@ -27,15 +27,18 @@ module.exports = (horseman) => {
       .click('.terms > .icheckbox_minimal > .iCheck-helper')
       .screenshot('./screenshots/5-Form_Filled.png')
       .click('.checkout')
+      .then(() => {
+        console.log(chalk.green('✅  Confirmed payment'));
+      })
       .waitForNextPage()
       .screenshot('./screenshots/6-Copped.png')
       .then(() => {
-        console.log(chalk.bold(chalk.green(chalk.underline('✅  We copped it! Take a deep breath and enjoy not taking an L!\n'))))
+        console.log(chalk.bold(chalk.green(chalk.underline('✅  We copped it! Take a deep breath and enjoy not taking an L!'))));
+        console.log(chalk.gray('📬  You should have an order confirmation in your inbox soon.\n'));
         resolve(horseman);
       })
       .catch((e) => {
-        //console.log(chalk.red('❌  Error while checking out: "' + e + '"'))
-        console.dir(e);
+        console.log(chalk.red('❌  Error while checking out: "' + e + '"'))
       })
   })
 }
