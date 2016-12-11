@@ -17,7 +17,9 @@ var horseman = new Horseman({
                   // Need to find a way to set it only for this function.
 });
 
-// Require functions
+const inquirer = require('inquirer');
+
+const saveData        = require('./functions/save_data.js');
 const bootstrap       = require('./functions/bootstrap.js');
 const waitForDrop     = require('./functions/wait_for_drop.js');
 const openStore       = require('./functions/open_store.js');
@@ -27,11 +29,18 @@ const cartProduct     = require('./functions/cart_product.js');
 const checkout        = require('./functions/checkout.js');
 const cleanup         = require('./functions/cleanup.js');
 
-bootstrap(horseman)
-  .then(waitForDrop)
-  .then(openStore)
-  .then(getProductUrl)
-  .then(openProductPage)
-  .then(cartProduct)
-  .then(checkout)
-  .then(cleanup)
+const questions       = require('./functions/user_input.js');
+
+inquirer.prompt(questions).then((answers) => {
+  saveData(answers);
+  console.log(answers);
+
+  bootstrap(horseman)
+    .then(waitForDrop)
+    .then(openStore)
+    .then(getProductUrl)
+    .then(openProductPage)
+    .then(cartProduct)
+    .then(checkout)
+    .then(cleanup)
+})

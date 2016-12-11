@@ -1,0 +1,29 @@
+{
+  "drop": {
+    "date": "a",
+    "time": "12:00am",
+    "zone": "LDN"
+  },
+  "product": {
+    "name": "a",
+    "color": "a",
+    "size": "Small"
+  },
+  "buyer": {
+    "fullName": "a",
+    "email": "a",
+    "phone": "a",
+    "address2": "a",
+    "address3": "a",
+    "city": "a",
+    "zip": "a",
+    "country": "a"
+  },
+  "creditCard": {
+    "type": "Visa",
+    "number": "a",
+    "expMonth": "a",
+    "expYear": "a",
+    "cvv": "aa"
+  }
+}
