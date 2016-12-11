@@ -1,7 +1,7 @@
-var Promise = require('bluebird');
-var chalk = require('chalk');
-var elasticlunr = require('elasticlunr');
-var index = elasticlunr(function() {
+let Promise = require('bluebird');
+let chalk = require('chalk');
+let elasticlunr = require('elasticlunr');
+let index = elasticlunr(function() {
   this.addField('name');
   this.addField('color');
 });
@@ -31,14 +31,14 @@ module.exports = (horseman) => {
           index.addDoc(product);
         };
 
-        var searchResults = index.search(data.product.name + ' ' + data.product.color, {
+        let searchResults = index.search(data.product.name + ' ' + data.product.color, {
           fields: {
             name: { boost: 6 },
             color: { boost: 3 }
           }
         });
 
-        var nextUrl = productMap[searchResults[0].ref].url;
+        let nextUrl = productMap[searchResults[0].ref].url;
         console.log(chalk.green('✅  Got the product URL: ' + nextUrl))
         resolve([horseman, nextUrl]);
       })

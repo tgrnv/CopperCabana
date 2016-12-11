@@ -1,10 +1,10 @@
-var Promise = require('bluebird')
-var chalk = require('chalk');
+let Promise = require('bluebird')
+let chalk = require('chalk');
 
 module.exports = (previousResolve) => {
   return new Promise((resolve, reject) => {
-    var horseman = previousResolve[0];
-    var productUrl = previousResolve[1];
+    let horseman = previousResolve[0];
+    let productUrl = previousResolve[1];
 
     horseman
       .open(productUrl)

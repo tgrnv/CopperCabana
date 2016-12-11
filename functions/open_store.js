@@ -1,6 +1,6 @@
-var data = require('../data.json');
-var Promise = require('bluebird');
-var chalk = require('chalk');
+let data = require('../data.json');
+let Promise = require('bluebird');
+let chalk = require('chalk');
 
 module.exports = (horseman) => {
   return new Promise((resolve, reject) => {

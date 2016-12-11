@@ -1,5 +1,5 @@
-var Promise = require('bluebird')
-var chalk = require('chalk');
+let Promise = require('bluebird')
+let chalk = require('chalk');
 const data = require('../data.json');
 
 module.exports = (horseman) => {

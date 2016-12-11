@@ -1,5 +1,5 @@
-var Promise = require('bluebird')
-var chalk = require('chalk');
+let Promise = require('bluebird')
+let chalk = require('chalk');
 
 module.exports = (horseman) => {
   return new Promise((resolve, reject) => {

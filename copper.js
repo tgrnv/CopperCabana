@@ -9,8 +9,8 @@ let index = elasticlunr(function() {
 })
 
 // Set up Horseman for page automation
-var Horseman = require('node-horseman');
-var horseman = new Horseman({
+let Horseman = require('node-horseman');
+let horseman = new Horseman({
   injectJquery: false,
   loadImages: false,
   diskCache: true,
@@ -53,6 +53,7 @@ console.log(`
          H     H         *          888oooo88 o88o  o888o o888ooo888 o88o  o888o o88o    88 o88o  o888o
          H-___-H
 `);
+
 inquirer.prompt(questions).then((answers) => {
   saveData(answers);
   console.log(answers);

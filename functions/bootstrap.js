@@ -1,19 +1,19 @@
-var Promise = require('bluebird');
-var chalk = require('chalk');
+let Promise = require('bluebird');
+let chalk = require('chalk');
 
 module.exports = (horseman) => {
   return new Promise((resolve, reject) => {
     horseman
-      .on('urlChanged', function(targetUrl) {
+      .on('urlChanged', (targetUrl) => {
         console.log(chalk.cyan('ℹ️  URL changed to ' + targetUrl));
       })
-      .on('consoleMessage', function(msg) {
+      .on('consoleMessage', (msg) => {
         console.log('Phantom browser threw a console message: ' + msg);
       })
-      .on('error', function(msg) {
+      .on('error', (msg) => {
         console.log('There was an error: ' + msg);
       })
-      .on('timeout', function(msg) {
+      .on('timeout', (msg) => {
         console.log('Something timed out: ' + msg);
       })
       .then(() => {

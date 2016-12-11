@@ -1,5 +1,5 @@
-var Promise = require('bluebird')
-var chalk = require('chalk');
+let Promise = require('bluebird')
+let chalk = require('chalk');
 const data = require('../data.json');
 
 module.exports = (horseman) => {
@@ -34,7 +34,7 @@ module.exports = (horseman) => {
       .waitForNextPage()
       .screenshot('./screenshots/6-Copped.png')
       .then(() => {
-        var copTime = global.finishTime - global.startTime;
+        let copTime = global.finishTime - global.startTime;
         console.log(chalk.bold(chalk.green(chalk.underline('✅  We copped it in ' + copTime + 'ms! Lit!'))));
         console.log(chalk.gray('📬  You should have an order confirmation in your inbox soon.\n'));
         resolve(horseman);

@@ -3,7 +3,15 @@ module.exports =
   {
     type: 'input',
     name: 'dropDate',
-    message: 'What\'s the date of the drop?'
+    message: 'What\'s the date of the drop? (DD/MM/YYYY)',
+    validate: (input) => {
+      var date_regex = /^(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/ ;
+      if(!(date_regex.test(input))) {
+        return 'Please enter a valid date in the format DD/MM/YYYY';
+      }
+      
+      return true;
+    }
   },
   {
     type: 'list',

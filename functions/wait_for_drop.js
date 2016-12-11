@@ -3,7 +3,7 @@ var chalk = require('chalk');
 const data = require('../data.json');
 
 module.exports = (horseman) => {
-  var dropTime = data.drop.date + " " + data.drop.time + " " + data.drop.zone;
+  let dropTime = data.drop.date + " " + data.drop.time + " " + data.drop.zone;
 
   return new Promise((resolve, reject) => {
     horseman
