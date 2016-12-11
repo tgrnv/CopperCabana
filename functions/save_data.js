@@ -1,6 +1,38 @@
 const fs = require('fs');
 
 module.exports = (answers) => {
+  let determineCategoryURL = (answers) => {
+    switch(answers.productCategory) {
+      case 'Jacket':
+        return "http://www.supremenewyork.com/shop/all/jackets";
+        break;
+      case 'Shirt':
+        return "http://www.supremenewyork.com/shop/all/shirts";
+        break;
+      case 'Top/Sweater':
+        return "http://www.supremenewyork.com/shop/all/tops_sweaters";
+        break;
+      case 'Sweatshirt':
+        return "http://www.supremenewyork.com/shop/all/sweatshirts";
+        break;
+      case 'Pant':
+        return "http://www.supremenewyork.com/shop/all/pants";
+        break;
+      case 'Hat':
+        return "http://www.supremenewyork.com/shop/all/hats";
+        break;
+      case 'Bag':
+        return "http://www.supremenewyork.com/shop/all/bags";
+        break;
+      case 'Accessories':
+        return "http://www.supremenewyork.com/shop/all/accessories";
+        break;
+      case 'Skate':
+        return "http://www.supremenewyork.com/shop/all/skate";
+        break;
+    }
+  };
+
   var data = {
     "drop": {
       "date": answers.dropDate,
@@ -11,37 +43,7 @@ module.exports = (answers) => {
       "name": answers.productName,
       "color": answers.productColor,
       "size": answers.size,
-      "categoryURL": (answers) => {
-        switch(answers.productCategory) {
-          case 'Jacket':
-            return "http://www.supremenewyork.com/shop/all/jackets";
-            break;
-          case 'Shirt':
-            return "http://www.supremenewyork.com/shop/all/shirts";
-            break;
-          case 'Top/Sweater':
-            return "http://www.supremenewyork.com/shop/all/tops_sweaters";
-            break;
-          case 'Sweatshirt':
-            return "http://www.supremenewyork.com/shop/all/sweatshirts";
-            break;
-          case 'Pant':
-            return "http://www.supremenewyork.com/shop/all/pants";
-            break;
-          case 'Hat':
-            return "http://www.supremenewyork.com/shop/all/hats";
-            break;
-          case 'Bag':
-            return "http://www.supremenewyork.com/shop/all/bags";
-            break;
-          case 'Accessories':
-            return "http://www.supremenewyork.com/shop/all/accessories";
-            break;
-          case 'Skate':
-            return "http://www.supremenewyork.com/shop/all/skate";
-            break;
-        }
-      }
+      "categoryURL": determineCategoryURL(answers)
     },
     "buyer": {
       "fullName": answers.buyerName,

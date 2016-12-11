@@ -1,13 +1,14 @@
 {
   "drop": {
-    "date": "",
+    "date": "#",
     "time": "03:10am",
     "zone": "LDN"
   },
   "product": {
     "name": "",
     "color": "",
-    "size": "Small"
+    "size": "Small",
+    "categoryURL": "http://www.supremenewyork.com/shop/all/jackets"
   },
   "buyer": {
     "fullName": "",
