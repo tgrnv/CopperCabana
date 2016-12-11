@@ -2,8 +2,8 @@
 const data = require('./data.json');
 
 // Set up elasticlunr for JSON searching
-var elasticlunr = require('elasticlunr');
-var index = elasticlunr(function() {
+let elasticlunr = require('elasticlunr');
+let index = elasticlunr(function() {
   this.addField('name');
   this.addField('color');
 })

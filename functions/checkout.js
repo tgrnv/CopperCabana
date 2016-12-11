@@ -26,7 +26,7 @@ module.exports = (horseman) => {
       .type('#vval', data.creditCard.cvv)
       .click('.terms > .icheckbox_minimal > .iCheck-helper')
       .screenshot('./screenshots/5-Form_Filled.png')
-      .click('.checkout')
+      .click('#cart-footer > #pay > .checkout')
       .then(() => {
         global.finishTime = Date.now();
         console.log(chalk.green('✅  Confirmed payment'));
