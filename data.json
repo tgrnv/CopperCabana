@@ -1,11 +1,18 @@
 {
   "drop": {
     "date": "14/12/2016",
-    "time": "11:00am",
-    "zone": "LDN"
+    "time": "10:43pm",
+    "zone": "LDN",
+    "year": "2016",
+    "month": "11",
+    "day": "14",
+    "hour": "23",
+    "minute": "19",
+    "second": "0",
+    "millisecond": "600"
   },
   "product": {
-    "name": "Cable Knit",
+    "name": "Wichser",
     "color": "Red",
     "size": "Large",
     "categoryURL": "http://www.supremenewyork.com/shop/all/tops_sweaters"

@@ -1,5 +1,6 @@
 let Promise = require('bluebird');
 let chalk = require('chalk');
+const data = require('../data.json');
 
 module.exports = (horseman) => {
   return new Promise((resolve, reject) => {
@@ -17,6 +18,7 @@ module.exports = (horseman) => {
         console.log('Something timed out: ' + msg);
       })
       .then(() => {
+        console.log(data);
         console.log(chalk.green('✅  Bootstrapped the bot successfully'))
       })
       .open('http://supremenewyork.com/shop/all')
