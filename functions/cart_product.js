@@ -12,7 +12,7 @@ module.exports = (horseman) => {
         if(sizeToCop !== "none") {
           var dropdown = document.getElementById('size');
           var availableSizes = dropdown.options;
-          
+
           for(var size, j = 0; size = availableSizes[j]; j++) {
             if(size.label === sizeToCop) {
               dropdown.selectedIndex = j;
