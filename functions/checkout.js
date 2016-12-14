@@ -7,23 +7,22 @@ module.exports = (horseman) => {
     horseman
       .open('https://www.supremenewyork.com/checkout')
       .waitForNextPage()
-      .evaluate(function(ccNumber) {
-        var ccField = document.getElementById('cnb');
-        ccField.value = ccNumber;
-      }, data.creditCard.number)
-      .type('#order_billing_name', data.buyer.fullName)
-      .type('#order_email', data.buyer.email)
-      .type('#order_tel', data.buyer.phone)
-      .type('#bo', data.buyer.address)
-      .type('#oba3', data.buyer.address2)
-      .type('#order_billing_address_3', data.buyer.address3)
-      .type('#order_billing_city', data.buyer.city)
-      .type('#order_billing_zip', data.buyer.zip)
+      .evaluate(function(data) {
+        document.getElementById('order_billing_name').value = data.buyer.fullName;
+        document.getElementById('order_email').value = data.buyer.email;
+        document.getElementById('order_tel').value = data.buyer.phone;
+        document.getElementById('bo').value = data.buyer.address;
+        document.getElementById('oba3').value = data.buyer.address2;
+        document.getElementById('order_billing_address_3').value = data.buyer.address3;
+        document.getElementById('order_billing_city').value = data.buyer.city;
+        document.getElementById('order_billing_zip').value = data.buyer.zip;
+        document.getElementById('cnb').value = data.creditCard.number;
+        document.getElementById('vval').value = data.creditCard.cvv;
+      }, data)
       .select('#order_billing_country', data.buyer.country)
       .select('#credit_card_type', data.creditCard.type)
       .select('#credit_card_month', data.creditCard.expMonth)
       .select('#credit_card_year', data.creditCard.expYear)
-      .type('#vval', data.creditCard.cvv)
       .click('.terms > .icheckbox_minimal > .iCheck-helper')
       .screenshot('./screenshots/5-Form_Filled.png')
       .click('#cart-footer > #pay > .checkout')

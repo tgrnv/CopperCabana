@@ -1,6 +1,3 @@
-// Make product, user and CC data available
-const data = require('./data.json');
-
 // Set up elasticlunr for JSON searching
 let elasticlunr = require('elasticlunr');
 let index = elasticlunr(function() {
@@ -54,16 +51,12 @@ console.log(`
          H-___-H
 `);
 
-inquirer.prompt(questions).then((answers) => {
-  saveData(answers);
-  console.log(answers);
 
-  bootstrap(horseman)
-    .then(waitForDrop)
-    .then(openStore)
-    .then(getProductUrl)
-    .then(openProductPage)
-    .then(cartProduct)
-    .then(checkout)
-    .then(cleanup)
-})
+bootstrap(horseman)
+  .then(waitForDrop)
+  .then(openStore)
+  .then(getProductUrl)
+  .then(openProductPage)
+  .then(cartProduct)
+  .then(checkout)
+  .then(cleanup)

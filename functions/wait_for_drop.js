@@ -10,10 +10,9 @@ module.exports = (horseman) => {
       .waitFor(function(dropTime) {
         var time = document.getElementsByTagName('time')[0].innerText;
 
-        return true;
-        /* if(time === dropTime) {
+        if(time === dropTime) {
           return true;
-        }; */
+        };
       }, dropTime, true)
       .then(() => {
         global.startTime = Date.now();

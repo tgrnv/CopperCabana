@@ -1,4 +1,4 @@
-let data = require('../data.json');
+const data = require('../data.json');
 let Promise = require('bluebird');
 let chalk = require('chalk');
 
