@@ -12,27 +12,27 @@
     "millisecond": "600"
   },
   "product": {
-    "name": "Wichser",
-    "color": "Red",
-    "size": "Large",
-    "categoryURL": "http://www.supremenewyork.com/shop/all/tops_sweaters"
+    "name": "Glossy Ripstop Camp Cap",
+    "color": "Black",
+    "size": "none",
+    "categoryURL": "http://www.supremenewyork.com/shop/all/hats"
   },
   "buyer": {
-    "fullName": "123",
-    "email": "123",
-    "phone": "",
-    "address": "",
-    "address2": "",
-    "address3": "",
-    "city": "",
-    "zip": "",
-    "country": ""
+    "fullName": "Sue Preme",
+    "email": "sue@sue.de",
+    "phone": "1234567890",
+    "address": "Test 1",
+    "address2": "Test 2",
+    "address3": "Test 3",
+    "city": "City",
+    "zip": "98765",
+    "country": "DE"
   },
   "creditCard": {
     "type": "Visa",
-    "number": "",
-    "expMonth": "",
-    "expYear": "",
-    "cvv": ""
+    "number": "1234567890123456",
+    "expMonth": "12",
+    "expYear": "2020",
+    "cvv": "456"
   }
 }

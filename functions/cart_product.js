@@ -6,17 +6,22 @@ module.exports = (horseman) => {
   return new Promise((resolve, reject) => {
     horseman
       .evaluate(function(sizeToCop) {
-        var dropdown = document.getElementById('size');
-        var availableSizes = dropdown.options;
         var sizeInStock = false;
 
-        // Select the appropriate size
-        for(var size, j = 0; size = availableSizes[j]; j++) {
-          if(size.label === sizeToCop) {
-            dropdown.selectedIndex = j;
-            sizeInStock = true;
-            break;
-          };
+        // Select the appropriate size, if applicable
+        if(sizeToCop !== "none") {
+          var dropdown = document.getElementById('size');
+          var availableSizes = dropdown.options;
+          
+          for(var size, j = 0; size = availableSizes[j]; j++) {
+            if(size.label === sizeToCop) {
+              dropdown.selectedIndex = j;
+              sizeInStock = true;
+              break;
+            }
+          }
+        } else {
+          sizeInStock = true;
         };
 
         return sizeInStock;
