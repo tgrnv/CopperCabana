@@ -12,6 +12,8 @@ module.exports = (horseman) => {
                           data.drop.second,
                           data.drop.millisecond);
 
+  console.log(chalk.cyan('ℹ️  Set to start at ' + new Date(dropTime)));
+
   return new Promise((resolve, reject) => {
     horseman
       .waitFor(function(dropTime) {
