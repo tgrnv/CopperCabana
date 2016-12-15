@@ -12,7 +12,7 @@ module.exports = (horseman) => {
                           data.drop.second,
                           data.drop.millisecond);
 
-  console.log(chalk.cyan('ℹ️  Set to start at ' + new Date(dropTime)));
+  console.log(chalk.cyan('ℹ️  Set to start at ' + new Date(dropTime) + (', offset by ' + data.drop.millisecond) + 'ms'));
 
   return new Promise((resolve, reject) => {
     horseman
