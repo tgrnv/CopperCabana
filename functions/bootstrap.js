@@ -25,6 +25,7 @@ module.exports = (horseman) => {
       .then(() => {
         console.log(chalk.green('✅  The Supreme site is working correctly'));
         console.log(chalk.cyan('ℹ️  Waiting for the drop to start'));
+        console.log(chalk.yellow('⚠️  Timing out after ' + 3600000/1000/60 + ' minutes'));
         resolve(horseman);
       })
       .catch((e) => {
