@@ -9,7 +9,7 @@ module.exports = (horseman) => {
         console.log(chalk.cyan('ℹ️  URL changed to ' + targetUrl));
       })
       .on('consoleMessage', (msg) => {
-        console.log('Phantom browser threw a console message: ' + msg);
+        console.log(chalk.cyan('ℹ️  Phantom browser threw a console message: ' + msg));
       })
       .on('error', (msg) => {
         console.log('There was an error: ' + msg);

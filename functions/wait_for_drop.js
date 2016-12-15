@@ -3,7 +3,6 @@ var chalk = require('chalk');
 const data = require('../data.json');
 
 module.exports = (horseman) => {
-  //let dropTime = data.drop.date + " " + data.drop.time + " " + data.drop.zone;
   let dropTime = Date.UTC(data.drop.year,
                           data.drop.month,
                           data.drop.day,
@@ -16,6 +15,9 @@ module.exports = (horseman) => {
 
   return new Promise((resolve, reject) => {
     horseman
+      .evaluate(function() {
+        console.log('It is now ' + new Date(Date.now()));
+      })
       .waitFor(function(dropTime) {
         var now = Date.now();
 
